@@ -1,3 +1,16 @@
+'''
+Third party app data sharing response of the participants
+here we make a list of columns that start with Q84
+then we melt the dataframe to create one column for all categorical variables
+then we count occurrences of each category and store in new dataframe
+then we print the counts dataframe
+then we create a bar plot for each categorical variable
+then we save the bar plot as a png file in the plots folder
+'''
+
+
+
+
 # import libraries
 import pandas as pd
 import os
