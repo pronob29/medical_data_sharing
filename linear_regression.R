@@ -10,7 +10,7 @@ library(MASS)
 df <- read_csv("C:/tera reynolds/techscore.csv")
 head(df)
 # set the independent variables (X) and dependent variable (y)
-X <- subset(df, select = c(otherPHR, PP, thirdParty, miPHR, selfTrackingApp, homeMedDevice, wearable, techScore))
+X <- subset(df, select = c(otherPHR, PP, thirdParty, miPHR, selfTrackingApp, homeMedDevice, wearable))
 y <- df$techScore
 
 # split the dataset into train and test sets with a 70-30 ratio
