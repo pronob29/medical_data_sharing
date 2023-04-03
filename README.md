@@ -5,3 +5,6 @@ Here, we used the sentiment analysis and bivariate analysis to analyze the data.
 
 We used python and R to do the analysis. Our final goal of this project is to find whether the participants are satisfied with the data sharing platform or not.
 This is a Human Computer Interaction project. From our analysis we draw the conclusion that the participants are satisfied with the data sharing only to conventional institution but still not with third party apps.
+
+
+# Q88-Q91 = health literacy
