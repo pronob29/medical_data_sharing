@@ -17,7 +17,14 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\summary_table.csv">
+        <entry key="\techscore - Copy.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\techscore.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
