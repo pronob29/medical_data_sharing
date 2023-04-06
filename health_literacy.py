@@ -39,15 +39,15 @@ techscore['health_literacy_score'] = health_literacy_score
 race = df['Q98']
 response = race.values.tolist()
 
-white_categories = ["White", "White,"]
+white_categories = ["White"]
 black_categories = ["Black or African American"]
 other_categories = ["American Indian or Alaska Native", "Asian", "Hispanic or Latino", "Middle Eastern",
-                    "Native Hawaiian or Pacific Islander", "Prefer not to disclose", "Prefer to self-describe:", "White,Prefer to self-describe:"]
+                    "Native Hawaiian or Pacific Islander", "Prefer not to disclose", "Prefer to self-describe:",]
 
 new_race = []
 
 for i, r in enumerate(response):
-    if r in white_categories:
+    if r in white_categories or r.startswith("White"):
         new_race.append("White")
     elif r in black_categories:
         new_race.append("Black")
