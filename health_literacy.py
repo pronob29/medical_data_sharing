@@ -46,7 +46,7 @@ other_categories = ["American Indian or Alaska Native", "Asian", "Hispanic or La
 
 new_race = []
 
-for i, r in enumerate(response):
+for i, r in enumerate(response):          # here i is not doing anything but to find the problem I used i before and else code now commented mode. 
     if r in white_categories:
         new_race.append("White")
     elif r in black_categories:
