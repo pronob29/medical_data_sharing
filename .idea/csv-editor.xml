@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\linear_regression.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\q84.csv">
           <value>
             <Attribute>

@@ -1,0 +1,28 @@
+Model Coefficients: [0.17630317 0.0029631 ]
+Model Intercept: 1.3078393940257618
+                                 OLS Regression Results                                
+=======================================================================================
+Dep. Variable:              techScore   R-squared (uncentered):                   0.694
+Model:                            OLS   Adj. R-squared (uncentered):              0.692
+Method:                 Least Squares   F-statistic:                              346.5
+Date:                Thu, 06 Apr 2023   Prob (F-statistic):                    3.10e-79
+Time:                        23:04:15   Log-Likelihood:                         -541.86
+No. Observations:                 307   AIC:                                      1088.
+Df Residuals:                     305   BIC:                                      1095.
+Df Model:                           2                                                  
+Covariance Type:            nonrobust                                                  
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+complexScore              0.3600      0.021     16.782      0.000       0.318       0.402
+health_literacy_score     0.0125      0.003      4.780      0.000       0.007       0.018
+==============================================================================
+Omnibus:                        8.034   Durbin-Watson:                   2.173
+Prob(Omnibus):                  0.018   Jarque-Bera (JB):                8.684
+Skew:                           0.295   Prob(JB):                       0.0130
+Kurtosis:                       3.576   Cond. No.                         10.8
+==============================================================================
+
+Notes:
+[1] R² is computed without centering (uncentered) since the model does not contain a constant.
+[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.

@@ -17,17 +17,28 @@ from sklearn.metrics import r2_score
 
 
 # read csv file
-data = pd.read_csv('techscore.csv')
+data = pd.read_csv('linear_regression.csv')
 
-print(data.head())
+# print(data.head())
 
-print(data.columns)
+# print(data.columns)
+
+# drop rows with missing values
+data.dropna(inplace=True)
+
+# create dummy variables for the 'race' column
+# race_dummies = pd.get_dummies(data['race'], prefix='race')
+# concatenate the dummy variables with the original data
+# data = pd.concat([data, race_dummies], axis=1)
+
+# drop the original 'race' column
+data.drop('race', axis=1, inplace=True)
 
 # response variable
 y = data['techScore']
 # predictor variables
-x = data.iloc[:, :-1]
-
+x = data.iloc[:, 1:]
+print(x.head())
 # split the data into training and testing sets
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 0)
 
@@ -71,4 +82,19 @@ plt.ylabel('Residuals')
 plt.title('Residuals vs Predicted Values')
 plt.show()
 
+# create a file object
+with open('linear_regression_results.txt', 'w') as f:
+    # write the model coefficients to the file
+    f.write('Model Coefficients: {}\n'.format(model.coef_))
 
+    # write the model intercept to the file
+    f.write('Model Intercept: {}\n'.format(model.intercept_))
+
+    # write the r-squared value to the file
+    # f.write('R-squared value: {}\n'.format(model.score(x_test, y_test)))
+
+    # write the predictions for the test set to the file
+    # f.write('Predicted Values: {}\n'.format(y_pred))
+
+    # write the model summary to the file
+    f.write('{}\n'.format(model_sm.summary()))
