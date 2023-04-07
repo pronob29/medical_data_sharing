@@ -95,6 +95,7 @@ with open('linear_regression_results.txt', 'w') as f:
 
     # write the predictions for the test set to the file
     # f.write('Predicted Values: {}\n'.format(y_pred))
-
+    # write the intercept to the file
+    f.write('Intercept:{}\n'.format(model_sm.params[0]))
     # write the model summary to the file
     f.write('{}\n'.format(model_sm.summary()))
