@@ -57,4 +57,4 @@ for i, r in enumerate(response):         # i is the index number and r is the re
     #     print("Invalid response at index {}: {}".format(i, r))
 
 techscore['race'] = new_race
-print(techscore)
+techscore.to_csv('linear_regression.csv', index=False)
