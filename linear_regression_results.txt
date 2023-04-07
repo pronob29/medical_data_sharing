@@ -1,5 +1,4 @@
-Model Coefficients: [0.17630317 0.0029631 ]
-Model Intercept: 1.3078393940257618
+
                                  OLS Regression Results                                
 =======================================================================================
 Dep. Variable:              techScore   R-squared (uncentered):                   0.694
@@ -24,5 +23,5 @@ Kurtosis:                       3.576   Cond. No.                         10.8
 ==============================================================================
 
 Notes:
-[1] R² is computed without centering (uncentered) since the model does not contain a constant.
+[1] RÂ² is computed without centering (uncentered) since the model does not contain a constant.
 [2] Standard Errors assume that the covariance matrix of the errors is correctly specified.
