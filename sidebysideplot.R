@@ -7,7 +7,7 @@ data <- read.csv("counts.csv")
 data$row_num <- rep(1:6, each=4)
 
 # Create plot with faceted subplots
-ggplot(data = data, aes(x = Category, y = Count, fill = "row")) +
+myplot <- ggplot(data = data, aes(x = Category, y = Count, fill = "row")) +
   geom_bar(stat = "identity", alpha = 0.7) +
   facet_wrap(~Variable, ncol = 4) +
   scale_fill_manual(values = "#4b6aa4") +
@@ -19,3 +19,5 @@ ggplot(data = data, aes(x = Category, y = Count, fill = "row")) +
         strip.text.x = element_blank(),
         axis.text.x = element_text(angle = 45, hjust = 1)) +
   guides(fill = FALSE)
+
+ggsave("sidebysideplot.png", plot = myplot, width = 12, height = 12, dpi = 400)
