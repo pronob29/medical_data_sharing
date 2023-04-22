@@ -45,6 +45,15 @@ df['sentiment_label'] = df['sentiment'].apply(lambda x: 'positive' if x > 0 else
 df['text'] = text
 #drop the Q85 column
 df = df.drop(labels = ['Q85'], axis=1)
+# make a bar chart of sentiment labels
+# plot showing the distribution of sentiment labels
+df['sentiment_label'].value_counts().plot(kind='bar', title='Sentiment Label Distribution')
+plt.xlabel('Sentiment Label')
+plt.ylabel('Count')
+plt.tight_layout()
+plt.savefig('sentiment_label_distribution.png')
+plt.show()
+
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(df['text'], df['sentiment_label'], test_size=0.2, random_state=42)
 
