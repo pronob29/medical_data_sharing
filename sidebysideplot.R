@@ -1,10 +1,17 @@
 library(ggplot2)
 
 # Read data
-data <- read.csv("counts.csv")
+data <- # Read data
+  data <- read.csv("side_by_side.csv")
 
 # Add row number column to data
 data$row_num <- rep(1:6, each=4)
+
+# Define the desired order of categories
+ordered_categories <- c("Very Comfortable", "Comfortable", "Neutral", "Uncomfortable", "Very Uncomfortable")
+
+# Create a new column with the ordered factor
+data$Category <- factor(data$Category, levels = ordered_categories)
 
 # Create plot with faceted subplots
 myplot <- ggplot(data = data, aes(x = Category, y = Count, fill = "row")) +
@@ -20,4 +27,6 @@ myplot <- ggplot(data = data, aes(x = Category, y = Count, fill = "row")) +
         axis.text.x = element_text(angle = 45, hjust = 1)) +
   guides(fill = FALSE)
 
-ggsave("sidebysideplot.png", plot = myplot, width = 12, height = 12, dpi = 400)
+myplot
+# save the plot as PNG file
+ggsave("side_by_side.png", myplot, width=10, height=10)
